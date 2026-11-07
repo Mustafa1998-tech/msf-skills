@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "gates": [
+    {
+      "id": "discovery",
+      "en": "Inspect scope, repository conventions and acceptance criteria.",
+      "ar": "افحص النطاق وأعراف المستودع ومعايير القبول."
+    },
+    {
+      "id": "architecture",
+      "en": "Check boundaries, compatibility and proportionate complexity.",
+      "ar": "افحص الحدود والتوافق والتعقيد المناسب."
+    },
+    {
+      "id": "design",
+      "en": "Verify accessibility, responsive UI and relevant directions and themes.",
+      "ar": "تحقّق من الإتاحة والاستجابة والاتجاهات والسمات ذات الصلة."
+    },
+    {
+      "id": "engineering",
+      "en": "Verify behavior, error paths and maintainability.",
+      "ar": "تحقّق من السلوك ومعالجة الأخطاء وقابلية الصيانة."
+    },
+    {
+      "id": "security",
+      "en": "Review authorized scope, permissions, licenses, secrets and dependencies.",
+      "ar": "راجع النطاق والصلاحيات والتراخيص والأسرار والتبعيات."
+    },
+    {
+      "id": "testing",
+      "en": "Run applicable checks and retain revision-specific evidence.",
+      "ar": "شغّل الفحوص واحتفظ بأدلة المراجعة المعنية."
+    },
+    {
+      "id": "documentation",
+      "en": "Verify language parity, commands and implemented features.",
+      "ar": "تحقّق من تكافؤ اللغتين والأوامر والميزات الفعلية."
+    },
+    {
+      "id": "video",
+      "en": "Verify rights, narration, captions, timing and encoded media.",
+      "ar": "تحقّق من الحقوق والسرد والترجمة والتوقيت وخصائص الملف."
+    },
+    {
+      "id": "release",
+      "en": "Verify authorization, commit, visibility, remote CI and rollback.",
+      "ar": "تحقّق من التفويض والمراجعة والإتاحة وفحوص GitHub وخطة التراجع."
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+web/.angular/
+web/dist/
+web/node_modules/
+api/bin/
+api/obj/
+/node_modules/
+/package-lock.json

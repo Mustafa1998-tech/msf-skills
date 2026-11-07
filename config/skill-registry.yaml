@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "pairs": [
+    {
+      "en": "msf-orchestrator",
+      "ar": "msf-orchestrator-ar",
+      "category": "orchestrator"
+    },
+    {
+      "en": "msf-planning",
+      "ar": "msf-planning-ar",
+      "category": "planning"
+    },
+    {
+      "en": "msf-architecture",
+      "ar": "msf-architecture-ar",
+      "category": "architecture"
+    },
+    {
+      "en": "msf-ui-ux",
+      "ar": "msf-ui-ux-ar",
+      "category": "ui-ux"
+    },
+    {
+      "en": "msf-frontend",
+      "ar": "msf-frontend-ar",
+      "category": "frontend"
+    },
+    {
+      "en": "msf-backend",
+      "ar": "msf-backend-ar",
+      "category": "backend"
+    },
+    {
+      "en": "msf-database",
+      "ar": "msf-database-ar",
+      "category": "database"
+    },
+    {
+      "en": "msf-security",
+      "ar": "msf-security-ar",
+      "category": "security"
+    },
+    {
+      "en": "msf-testing",
+      "ar": "msf-testing-ar",
+      "category": "testing"
+    },
+    {
+      "en": "msf-devops",
+      "ar": "msf-devops-ar",
+      "category": "devops"
+    },
+    {
+      "en": "msf-documentation",
+      "ar": "msf-documentation-ar",
+      "category": "documentation"
+    },
+    {
+      "en": "msf-video-studio",
+      "ar": "msf-video-studio-ar",
+      "category": "video-studio"
+    }
+  ]
+}

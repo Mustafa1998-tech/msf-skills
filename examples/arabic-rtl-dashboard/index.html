@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>مِرْصاد — متابعة الشحنات</title><link rel="stylesheet" href="styles.css"><script type="module" src="app.mjs"></script></head>
+<body>
+<a class="skip" href="#main" data-i18n="skip">انتقل إلى المحتوى</a>
+<header class="mast"><div class="shell mast-inner">
+  <div class="identity"><span class="mark" aria-hidden="true"><i></i><i></i><i></i></span><div><strong data-i18n="brand">مِرْصاد</strong><small data-i18n="product">مكتب متابعة الشحنات</small></div></div>
+  <div class="head-actions"><button id="theme" type="button" aria-pressed="false" data-i18n="theme">الوضع الداكن</button><button id="language" type="button" lang="en" dir="ltr">English</button></div>
+</div></header>
+<main class="shell" id="main" tabindex="-1">
+  <div class="intro"><div><p class="eyebrow"><span class="signal" aria-hidden="true"></span><span data-i18n="demo">بيانات تجريبية</span></p><h1 data-i18n="title">متابعة الشحنات</h1><p class="muted" data-i18n="lede">راجع حركة الشحنات وتابع الحالات التي تحتاج إلى تدخل.</p></div><p class="date"><span data-i18n="period">فترة العرض</span><strong id="period"></strong></p></div>
+  <section class="kpis" aria-label="مؤشرات الشحنات" data-label="kpis">
+    <div><span data-i18n="total">إجمالي الشحنات</span><strong id="count-total"></strong></div>
+    <div><span data-i18n="moving">قيد النقل</span><strong id="count-moving"></strong></div>
+    <div><span data-i18n="delivered">تم التسليم</span><strong id="count-delivered"></strong></div>
+    <div class="warn"><span data-i18n="delayed">متأخرة</span><strong id="count-delayed"></strong></div>
+  </section>
+  <div class="review">
+    <section class="activity" aria-labelledby="activity-title">
+      <h2 id="activity-title" data-i18n="activity">تسجيل الشحنات</h2><p class="muted" data-i18n="chartIntro">عدد الشحنات المسجلة حسب المجموعة الزمنية</p>
+      <div id="chart"></div><p id="chart-summary" class="sr-only"></p>
+    </section>
+    <section class="watch" aria-labelledby="watch-title">
+      <p class="eyebrow" data-i18n="watchLabel">تنبيه تشغيلي</p><h2 id="watch-title" data-i18n="watchTitle">شحنات تحتاج إلى متابعة</h2><p id="watch-detail"></p>
+      <button id="show-delayed" type="button" data-i18n="showDelayed">عرض الشحنات المتأخرة</button>
+    </section>
+  </div>
+  <section class="ledger" id="ledger" aria-labelledby="ledger-title">
+    <div class="ledger-head"><div><h2 id="ledger-title" tabindex="-1" data-i18n="ledger">سجل الشحنات</h2><p class="muted" data-i18n="ledgerDetail">ابحث برقم الشحنة أو المحتوى أو مركز الشحن.</p></div><button id="reset" type="button" data-i18n="reset">مسح البحث والتصفية</button></div>
+    <div class="toolbar">
+      <label class="search"><span data-i18n="search">بحث</span><input type="search" id="search" dir="auto" data-placeholder="placeholder" placeholder="مثال: الرياض أو MC-4182"></label>
+      <label><span data-i18n="status">الحالة</span><select id="status"><option value="" data-i18n="allStatuses">كل الحالات</option><option value="moving" data-i18n="moving">قيد النقل</option><option value="delivered" data-i18n="delivered">تم التسليم</option><option value="delayed" data-i18n="delayed">متأخرة</option></select></label>
+      <div><span id="hub-label" data-i18n="hub">مركز الشحن</span><button id="hub-button" type="button" aria-haspopup="dialog" aria-labelledby="hub-label hub-current"><span id="hub-current"></span><span aria-hidden="true">⌄</span></button></div>
+    </div>
+    <p class="muted result" id="results" role="status" aria-live="polite"></p>
+    <p class="muted table-hint" data-i18n="tableHint">مرّر الجدول أفقياً لعرض كل الأعمدة.</p>
+    <div class="table-frame" tabindex="0" role="region" aria-labelledby="ledger-title"><table>
+      <thead><tr><th scope="col" data-i18n="reference">رقم الشحنة</th><th scope="col" data-i18n="contents">المحتوى</th><th scope="col" data-i18n="hub">مركز الشحن</th><th scope="col" data-i18n="status">الحالة</th><th scope="col" id="sort-head" aria-sort="descending"><button type="button" id="sort"><span data-i18n="registered">تاريخ التسجيل</span> <span id="sort-icon" aria-hidden="true">↓</span></button></th><th scope="col" data-i18n="details">التفاصيل</th></tr></thead>
+      <tbody id="table-body"></tbody>
+    </table></div>
+    <div class="pagination" aria-label="صفحات السجل" data-label="pagination"><button id="prev" type="button" data-i18n="prev">السابق</button><span id="page-number"></span><button id="next" type="button" data-i18n="next">التالي</button></div>
+  </section>
+  <noscript>تتطلب هذه اللوحة تشغيل JavaScript. This dashboard requires JavaScript.</noscript>
+</main>
+<footer class="shell"><span data-i18n="footer">مرصاد · نموذج تدريبي ببيانات اصطناعية</span><bdi dir="ltr">MSF / 01</bdi></footer>
+<dialog id="hub-dialog" aria-labelledby="hub-title"><div class="dialog-head"><h2 id="hub-title" data-i18n="chooseHub">اختر مركز الشحن</h2><form method="dialog"><button type="submit" data-i18n="close">إغلاق</button></form></div><label><span data-i18n="searchHub">ابحث عن مركز أو رمزه</span><input id="hub-search" type="search" dir="auto" autofocus></label><div id="hub-options"></div><p id="hub-empty" role="status" hidden data-i18n="noHubs">لا توجد مراكز مطابقة. غيّر عبارة البحث.</p></dialog>
+<dialog id="detail-dialog" aria-labelledby="detail-title"><div class="dialog-head"><h2 id="detail-title" data-i18n="details">التفاصيل</h2><form method="dialog"><button type="submit" autofocus data-i18n="close">إغلاق</button></form></div><dl id="detail-body"></dl></dialog>
+</body></html>

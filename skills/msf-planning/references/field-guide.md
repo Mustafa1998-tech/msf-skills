@@ -1,0 +1,3 @@
+# Field procedure
+
+Write a one-line outcome, then interview by exception: what can be rejected, undone, retried, or audited? For inventory archival, “Given a viewer, when attempting archive, then the server denies it and the item remains active.” Label the existing behavior separately from the requirement. Sequence schema compatibility, server rule, user feedback and regression evidence. An ADR records context, alternatives, decision and consequences. Credit [Superpowers](https://github.com/obra/superpowers) for the practice of explicit verification and incremental delivery; adopt independently written procedures.

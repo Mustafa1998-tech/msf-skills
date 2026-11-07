@@ -1,0 +1,3 @@
+# إجراء عملي
+
+راجع مهمة واحدة من الدخول حتى رسالة النتيجة. سجّل المرجع والمشكلة التي يعالجها والتعديل الخاص بهوية المنتج. راجع [Impeccable](https://github.com/pbakaus/impeccable) و[UI UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) و[Anthropic Frontend Design](https://github.com/anthropics/skills/tree/main/skills/frontend-design) و[Web Interface Guidelines](https://github.com/vercel-labs/web-interface-guidelines) كمراجع منفصلة. رتّب النقد حسب تعطل إكمال المهمة ثم الإتاحة ثم التسلسل البصري والاتساق ثم الاستجابة والصقل. لكل مشكلة سجّل العرض واللغة والسمة والخطوات والأثر والإصلاح. اختبر استخدام الجوال بيد واحدة ولوحة مفاتيح الحاسوب. افحص ترخيص Tajawal أو IBM Plex Sans Arabic وشروط توزيعهما قبل الاستخدام. تجنّب الرموز التعبيرية كأيقونات للمنتج.

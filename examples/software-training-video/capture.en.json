@@ -1,0 +1,29 @@
+{
+  "asset_scope": "synthetic",
+  "locale": "en",
+  "url": "http://127.0.0.1:8765/fixture.html",
+  "record_video": false,
+  "steps": [
+    {
+      "wait_for": "#edit",
+      "file": "before.png"
+    },
+    {
+      "click": "#edit",
+      "wait_for": "#status-choice",
+      "file": "choose.png"
+    },
+    {
+      "select": {
+        "locator": "#status-choice",
+        "value": "ready"
+      },
+      "file": "selected.png"
+    },
+    {
+      "click": "#save",
+      "wait_for": "#saved",
+      "file": "after.png"
+    }
+  ]
+}

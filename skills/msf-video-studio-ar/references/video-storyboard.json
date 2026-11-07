@@ -1,0 +1,58 @@
+{
+  "title": "استبدل هذا بعنوان يوضح هدف التدريب",
+  "locale": "ar",
+  "asset_scope": "review_pending",
+  "scenes": [
+    {
+      "source": "captures/scene-01.png",
+      "duration": 5,
+      "transition": {
+        "fade_in": 0.2,
+        "fade_out": 0.2
+      },
+      "captions": [
+        {
+          "start": 0.25,
+          "end": 4.65,
+          "text": "افتح الشاشة التدريبية واختر عنصر التحكّم المميّز."
+        }
+      ],
+      "overlays": [
+        {
+          "type": "cursor",
+          "start": 0.5,
+          "end": 2.2,
+          "at": [
+            850,
+            400
+          ],
+          "to": [
+            1240,
+            570
+          ]
+        },
+        {
+          "type": "focus",
+          "start": 2.0,
+          "end": 4.4,
+          "box": [
+            1210,
+            545,
+            350,
+            90
+          ]
+        },
+        {
+          "type": "callout",
+          "start": 2.15,
+          "end": 4.4,
+          "at": [
+            1380,
+            680
+          ],
+          "text": "١. اختر عنصر التحكّم"
+        }
+      ]
+    }
+  ]
+}

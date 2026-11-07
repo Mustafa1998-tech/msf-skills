@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sample board — synthetic training fixture</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #f6f8fc; color: #182741; font: 2rem system-ui, sans-serif; }
+  header { background: #142544; color: #f1f5ff; padding: 1.5rem 9.375%; display: flex;
+    justify-content: space-between; align-items: center; font-weight: 700; }
+  header small { background: #25406d; padding: .55rem 1rem; border-radius: 100px; }
+  main { margin: 2.5rem 9.375%; }
+  h1 { font-size: 4rem; margin: 0; }
+  p { margin: .5rem 0 2rem; color: #485d7a; }
+  section { background: #fff; border: 2px solid #dce4f0; border-radius: 1.5rem;
+    padding: 2rem 3rem 3rem; }
+  .row { display: grid; grid-template-columns: 3fr 2fr; gap: 2rem; }
+  .labels { font-size: 1.4rem; color: #485d7a; font-weight: bold; border-bottom: 2px solid #dce4f0;
+    margin-bottom: 2rem; padding-bottom: 1.3rem; }
+  strong { font-size: 2.5rem; }
+  button, select, .status, .saved { width: 85%; padding: 1rem; border-radius: .75rem;
+    font: inherit; display: block; text-align: center; }
+  button { border: 0; background: #2755b5; color: white; cursor: pointer; margin-top: 1.5rem; }
+  select { margin-top: 1.5rem; border: 2px solid #2755b5; background: white; }
+  .status { background: #e8efff; color: #2755b5; }
+  .status.ready, .saved { background: #e1f5ea; color: #196846; }
+  .saved { margin-top: 1.5rem; }
+  [hidden] { display: none !important; }
+</style>
+<header><span id="brand">WORKBENCH / TRAINING</span><small id="tag">SYNTHETIC DEMO</small></header>
+<main>
+  <h1 id="title">Sample board</h1><p id="desc">Track the status of a practice task.</p>
+  <section aria-labelledby="title">
+    <div class="row labels"><span id="task-label">TASK</span><span id="status-label">STATUS</span></div>
+    <div class="row">
+      <div><strong id="task">Review sample form</strong><p>DEMO-001</p></div>
+      <div><span class="status" id="current">In progress</span>
+        <button id="edit" type="button">Update status</button>
+        <select id="status-choice" aria-labelledby="status-label" hidden>
+          <option id="in-progress" value="progress">In progress</option>
+          <option id="ready" value="ready">Ready for review</option>
+        </select>
+        <button id="save" type="button" hidden>Save</button>
+        <span class="saved" id="saved" role="status" hidden>Change saved</span>
+      </div>
+    </div>
+  </section>
+</main>
+<script>
+  const $ = id => document.getElementById(id);
+  if (navigator.language.toLowerCase().startsWith("ar")) {
+    document.documentElement.lang = "ar";
+    document.documentElement.dir = "rtl";
+    document.title = "لوحة تجريبية — تدريب اصطناعي";
+    const labels = {brand: "منصة العمل / تدريب", tag: "مثال اصطناعي", title: "لوحة تجريبية",
+      desc: "تابع حالة مهمة تدريبية.", "task-label": "المهمة", "status-label": "الحالة",
+      task: "مراجعة نموذج تجريبي", current: "قيد التنفيذ", edit: "تحديث الحالة", save: "حفظ",
+      "in-progress": "قيد التنفيذ", ready: "جاهزة للمراجعة", saved: "تم حفظ التغيير"};
+    for (const [id, text] of Object.entries(labels)) $(id).textContent = text;
+  }
+  $("edit").onclick = () => {
+    $("edit").hidden = true;
+    $("status-choice").hidden = $("save").hidden = false;
+    $("status-choice").focus();
+  };
+  $("save").onclick = () => {
+    const selected = $("status-choice").value;
+    $("current").textContent = $(selected === "ready" ? "ready" : "in-progress").textContent;
+    $("current").classList.toggle("ready", selected === "ready");
+    $("status-choice").hidden = $("save").hidden = true;
+    $("saved").hidden = false;
+  };
+</script>
+</html>

@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "name": "MSF Skills",
+  "default_branch": "main",
+  "languages": [
+    "en",
+    "ar"
+  ],
+  "status": [
+    "PASS",
+    "FAIL",
+    "BLOCKED",
+    "NOT APPLICABLE"
+  ],
+  "approval_required": [
+    "production_deployment",
+    "infrastructure_change",
+    "secrets_change",
+    "live_data_deletion",
+    "destructive_operations"
+  ],
+  "external_integrations": "opt-in",
+  "release_tag": "v1.0.0"
+}

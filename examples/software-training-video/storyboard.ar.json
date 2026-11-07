@@ -1,0 +1,159 @@
+{
+  "title": "تحديث حالة مهمة تجريبية",
+  "locale": "ar",
+  "asset_scope": "synthetic",
+  "music": {
+    "source": "assets/ambient.m4a",
+    "approval": "provided_approved",
+    "gain": 0.1
+  },
+  "scenes": [
+    {
+      "source": "assets/ar-1.png",
+      "duration": 4.3,
+      "transition": {
+        "fade_in": 0.27
+      },
+      "captions": [
+        {
+          "start": 0.27,
+          "end": 4.12,
+          "text": "افتح اللوحة التجريبية واختر «تحديث الحالة»."
+        }
+      ],
+      "overlays": [
+        {
+          "type": "cursor",
+          "start": 0.9,
+          "end": 2.2,
+          "at": [
+            965,
+            443
+          ],
+          "to": [
+            630,
+            683
+          ]
+        },
+        {
+          "type": "focus",
+          "start": 2.0,
+          "end": 4.05,
+          "box": [
+            324,
+            629,
+            512,
+            102
+          ]
+        },
+        {
+          "type": "callout",
+          "start": 2.1,
+          "end": 4.05,
+          "at": [
+            580,
+            819
+          ],
+          "text": "١. حدّث الحالة"
+        }
+      ]
+    },
+    {
+      "source": "assets/ar-2.png",
+      "duration": 3.7,
+      "captions": [
+        {
+          "start": 0.22,
+          "end": 3.62,
+          "text": "اختر «جاهزة للمراجعة» من قائمة الحالة."
+        }
+      ],
+      "overlays": [
+        {
+          "type": "cursor",
+          "start": 0.7,
+          "end": 1.9,
+          "at": [
+            905,
+            595
+          ],
+          "to": [
+            630,
+            752
+          ]
+        },
+        {
+          "type": "focus",
+          "start": 1.75,
+          "end": 3.6,
+          "box": [
+            340,
+            700,
+            480,
+            97
+          ]
+        },
+        {
+          "type": "callout",
+          "start": 2.0,
+          "end": 3.6,
+          "at": [
+            580,
+            893
+          ],
+          "text": "٢. اختر جاهزة للمراجعة"
+        }
+      ]
+    },
+    {
+      "source": "assets/ar-3.png",
+      "duration": 4.9,
+      "transition": {
+        "fade_out": 0.35
+      },
+      "captions": [
+        {
+          "start": 0.18,
+          "end": 4.54,
+          "text": "تحقّق من الحالة الجديدة وظهور رسالة «تم حفظ التغيير»."
+        }
+      ],
+      "overlays": [
+        {
+          "type": "cursor",
+          "start": 0.62,
+          "end": 2.17,
+          "at": [
+            965,
+            443
+          ],
+          "to": [
+            630,
+            682
+          ]
+        },
+        {
+          "type": "focus",
+          "start": 2.0,
+          "end": 4.54,
+          "box": [
+            324,
+            479,
+            512,
+            252
+          ]
+        },
+        {
+          "type": "callout",
+          "start": 2.12,
+          "end": 4.54,
+          "at": [
+            580,
+            819
+          ],
+          "text": "٣. تأكّد من حفظ التغيير"
+        }
+      ]
+    }
+  ]
+}

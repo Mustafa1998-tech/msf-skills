@@ -1,0 +1,83 @@
+<header>
+  <div class="mast wrap"><div class="identity"><span aria-hidden="true">▤</span><div><b>{{t('brand')}}</b><small>{{t('local')}}</small></div></div>
+    <button type="button" [attr.lang]="language()==='ar'?'en':'ar'" [attr.dir]="language()==='ar'?'ltr':'rtl'" (click)="toggleLanguage()">{{t('language')}}</button></div>
+</header>
+<main class="wrap">
+  <h1>{{t('title')}}</h1>
+  @if (error(); as message) { <p class="error" role="alert">{{t(message)}}</p> }
+  @if (busy()) { <p role="status">{{t('loading')}}</p> }
+  @if (!connected()) {
+    <form class="connect" ngNativeValidate (ngSubmit)="connect()">
+      <p>{{t('enterKey')}}</p><label>{{t('key')}}<input type="password" name="key" [(ngModel)]="key" required autocomplete="off" [disabled]="busy()"></label>
+      <button class="primary" type="submit" [disabled]="busy()">{{t('connect')}}</button>
+    </form>
+  } @else {
+    <section aria-labelledby="item-list-heading">
+      <div class="line section-title">
+        <h2 id="item-list-heading" tabindex="-1">{{t(archived?'archived':'active')}}</h2>
+        <button type="button" [disabled]="busy() || saving()" (click)="disconnect()">{{t('disconnect')}}</button>
+      </div>
+      @if (notice(); as message) { <p class="notice" role="status">{{t(message)}}</p> }
+      <div class="line actions">
+        <button type="button" [attr.aria-pressed]="!archived" [disabled]="busy()" (click)="selectArchive(false)">{{t('active')}}</button>
+        <button type="button" [attr.aria-pressed]="archived" [disabled]="busy()" (click)="selectArchive(true)">{{t('archived')}}</button>
+        @if (!archived) { <button class="primary" type="button" [disabled]="busy()" (click)="openAction(actionDialog,'add')">{{t('add')}}</button> }
+      </div>
+      <form class="line filters" ngNativeValidate (ngSubmit)="load()">
+        <label>{{t('search')}}<input type="search" dir="auto" name="query" maxlength="80" [(ngModel)]="search" [placeholder]="t('query')"></label>
+        <div><span id="category-filter-label">{{t('category')}}</span><button type="button" aria-haspopup="dialog" aria-labelledby="category-filter-label category-filter-value" (click)="showCategories(categoryDialog,false)"><span id="category-filter-value">{{category ? categoryLabel(category):t('all')}}</span></button></div>
+        <button type="submit" [disabled]="busy()">{{t('filter')}}</button>
+      </form>
+      <div class="table" role="region" aria-labelledby="item-list-heading" tabindex="0">
+        <table>
+          <thead><tr><th scope="col">{{t('sku')}}</th><th scope="col">{{t('name')}}</th><th scope="col">{{t('category')}}</th><th scope="col">{{t('qty')}}</th><th scope="col">{{t('actions')}}</th></tr></thead>
+          <tbody>
+            @for (row of items(); track row.id) {
+              <tr><th scope="row"><bdi dir="ltr">{{row.sku}}</bdi></th><td>{{label(row)}}</td><td>{{categoryLabel(row.categoryCode)}}</td><td>{{number(row.quantity)}}</td>
+                <td><div class="line">
+                  @if (!row.archived) { <button type="button" [disabled]="busy()" [attr.aria-label]="t('edit')+' '+row.sku" (click)="openAction(actionDialog,'edit',row)">{{t('edit')}}</button> }
+                  <button type="button" [disabled]="busy()" [attr.aria-label]="t(row.archived?'restore':'archive')+' '+row.sku" (click)="openAction(actionDialog,row.archived?'restore':'archive',row)">{{t(row.archived?'restore':'archive')}}</button>
+                </div></td>
+              </tr>
+            } @empty {
+              @if (!busy() && !error()) { <tr><td colspan="5">{{t('empty')}}</td></tr> }
+            }
+          </tbody>
+        </table>
+      </div>
+      <div class="line paging">
+        <button type="button" [disabled]="busy()" (click)="load(before)">{{t('refresh')}}</button>
+        <button type="button" [disabled]="!before || busy()" (click)="load()">{{t('newest')}}</button>
+        <button type="button" [disabled]="items().length!==25 || busy()" (click)="older()">{{t('older')}}</button>
+      </div>
+    </section>
+  }
+</main>
+<dialog #actionDialog aria-labelledby="action-heading" (cancel)="saving() && $event.preventDefault()">
+  <h2 id="action-heading">{{t(mode())}}</h2>
+  @if (actionError(); as message) { <p role="alert" class="error">{{t(message)}}</p> }
+  <form class="stack" ngNativeValidate (ngSubmit)="submit(actionDialog)">
+    @if (mode()==='add' || mode()==='edit') {
+      <label>{{t('sku')}}<input name="sku" dir="ltr" [(ngModel)]="draft.sku" required maxlength="24" pattern="[A-Za-z0-9\-]+"></label>
+      <label>{{t('nameAr')}}<input name="nameAr" dir="rtl" [(ngModel)]="draft.nameAr" required maxlength="80"></label>
+      <label>{{t('nameEn')}}<input name="nameEn" dir="ltr" [(ngModel)]="draft.nameEn" required maxlength="80"></label>
+      <div><span id="draft-category-label">{{t('category')}}</span><button type="button" aria-haspopup="dialog" aria-labelledby="draft-category-label draft-category-value" (click)="showCategories(categoryDialog,true)"><span id="draft-category-value">{{draft.categoryCode ? categoryLabel(draft.categoryCode):t('categoryPrompt')}}</span></button></div>
+      <label>{{t('qty')}}<input type="number" name="qty" [(ngModel)]="draft.quantity" min="0" max="1000000" step="1" required></label>
+    } @else {
+      <p><bdi dir="ltr">{{current()?.sku}}</bdi></p><p>{{t(mode()==='archive'?'archiveHint':'restoreHint')}}</p>
+    }
+    <div class="line">
+      <button type="button" [disabled]="saving()" (click)="actionDialog.close()">{{t('cancel')}}</button>
+      <button type="submit" class="primary" [disabled]="saving()">{{saving() ? t('saving') : t(mode()==='archive'?'archive':mode()==='restore'?'restore':'save')}}</button>
+    </div>
+  </form>
+</dialog>
+<dialog #categoryDialog aria-labelledby="category-heading">
+  <div class="line section-title"><h2 id="category-heading">{{t('categoryChoose')}}</h2><button type="button" (click)="categoryDialog.close()">{{t('close')}}</button></div>
+  <label>{{t('categorySearch')}}<input type="search" dir="auto" autofocus [(ngModel)]="categorySearch"></label>
+  <div class="stack choices">
+    @if (!pickingForDraft && !categorySearch) { <button type="button" (click)="selectCategory(categoryDialog,'')">{{t('all')}}</button> }
+    @for (option of options(); track option.code) { <button type="button" (click)="selectCategory(categoryDialog,option.code)">{{label(option)}} · <bdi dir="ltr">{{option.code}}</bdi></button> }
+    @empty { <p role="status">{{t('categoryEmpty')}}</p> }
+  </div>
+</dialog>

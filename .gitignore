@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+node_modules/
+dist/
+.angular/
+bin/
+obj/
+artifacts/
+.agents/
+.claude/
+.DS_Store
+/output/
+/examples/software-training-video/local-captures-*/
