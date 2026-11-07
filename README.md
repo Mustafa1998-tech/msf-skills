@@ -6,6 +6,18 @@ Created by Mustafa. MSF Skills is an independent, bilingual collection of agent 
 
 [العربية](README.ar.md) · [Install](INSTALL.md) · [Source and license register](GITHUB_SOURCES.md)
 
+## Domains, skills and external sources
+
+| Count | What it covers |
+| --- | --- |
+| **9 domains** | Discovery and planning, architecture, UI/UX, full-stack engineering, security, testing, DevOps, documentation, and video production |
+| **12 original MSF skills** | One orchestrator and 11 specialists. Full-stack engineering is split into frontend, backend, and database skills. |
+| **24 installable skill folders** | 12 English and 12 Arabic variants. See the [skill registry](config/skill-registry.yaml). |
+| **19 original external links** | The initial brief listed 1 planning source, 2 UI/UX sources, 1 Anthropic skills repository, 3 Playwright repositories, and 12 video sources. |
+| **43 documented external sources** | The expanded [source and license register](GITHUB_SOURCES.md) includes the initial links and additional references. |
+
+The orchestrator selects from the 11 internal specialists according to the task. External sources include skills, plugins, libraries, tools, and documentation. Install an external dependency only when the selected workflow requires it. The figure **31** combines the 12 original skills and the 19 initial external links.
+
 ## Skill catalog
 
 Every English ID has an equivalent Arabic ID with the suffix `-ar`. The registry lists all 24 installable directories.
