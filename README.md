@@ -4,7 +4,7 @@
 
 Created by Mustafa. MSF Skills is an independent, bilingual collection of agent workflows, implementation references, checks and examples for software delivery. Pick one language and start with the orchestrator, or invoke a specialized skill directly.
 
-[العربية](README.ar.md) · [Install](INSTALL.md) · [Source and license register](GITHUB_SOURCES.md)
+[العربية](README.ar.md) · [Install](INSTALL.md) · [Source and license register](GITHUB_SOURCES.md) · [Archived upstream sources](vendor/README.md)
 
 ## Domains, skills and external sources
 

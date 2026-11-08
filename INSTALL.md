@@ -24,6 +24,6 @@ Start a new local session from the project. In Codex, use the skill picker or ty
 - Uninstall an unmodified helper installation with `uninstall` and the same flags. Check out a reviewed revision and run `install` again. Manually copied folders should be removed or updated manually after review.
 - If discovery fails, check the host, skill folder name, `SKILL.md` location and selected locale. Try a new local session and check for another same-named skill or organization policy. Use `python3 scripts/validate-skills.py` in the checkout for structural checks.
 - Use an up-to-date local client with documented Agent Skills support. No minimum client build or hosted-session installation is certified here. Hosted clients and managed policies have separate rules.
-- Media, scanning and framework tools have separate prerequisites. See the corresponding skill and the [upstream source register](GITHUB_SOURCES.md).
+- Media, scanning and framework tools have separate prerequisites. See the corresponding skill and the [upstream source register](GITHUB_SOURCES.md). For opt-in offline extraction of preserved upstream source, see the [archive guide](vendor/README.md).
 
 [OpenAI installation conventions](https://developers.openai.com/api/reference/cli) · [Claude Code skills](https://code.claude.com/docs/en/skills) · [Agent Skills specification](https://agentskills.io/specification)

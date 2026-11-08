@@ -4,7 +4,7 @@
 
 This register records public repositories verified against GitHub on 2026-11-07, their observed default-branch commits, and their upstream instructions or reference entry points. The commit links identify the repository snapshot reviewed. A link to external documentation can track a moving version. Confirm the installation method, license and dependency versions for the exact release you plan to use.
 
-MSF Skills includes original workflows under [MIT](LICENSE). The projects listed here are attributed as references or optional integrations. MSF does not bundle their source, logos, fonts, binaries, speech models or example media. Installing MSF does not install these projects. Agent compatibility means upstream documentation was located where indicated. It is separate from an installation or runtime test.
+MSF Skills includes original workflows under [MIT](LICENSE). The projects listed here are attributed as references or optional integrations. The [archive guide](vendor/README.md) identifies the selected source snapshots included under their original licenses. Installation of external skills, runtimes and services remains separate. Agent compatibility means upstream documentation was located where indicated. It is separate from an installation or runtime test.
 
 The repository license can differ from the terms of a hosted service, binary distribution, bundled model, asset, font or plugin. Where a license file could not be established, treat the integration as reference-only pending verification. Review scripts and dependency sources before running a remote installer. Confirm the scope and authorization for any browser or security tool.
 

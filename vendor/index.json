@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "snapshots": [
+    {
+      "id": "superpowers",
+      "name": "Superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "archive": "archives/superpowers.zip",
+      "sha256": "ec54ed5e098f48edad7a663dd7136df75e0affc3c1b798433f70c06749f79c9e",
+      "file_count": 82,
+      "license": "MIT",
+      "license_path": "LICENSE",
+      "scope_en": "All 15 skill folders and their bundled scripts and references. Repository plugins, hooks and tests outside skills are omitted.",
+      "scope_ar": "مجلدات المهارات الـ15 مع سكربتاتها ومراجعها. إضافات المستودع وHooks والاختبارات خارج مجلد المهارات غير مشمولة."
+    },
+    {
+      "id": "impeccable",
+      "name": "Impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "commit": "687bc381bc9091bf252c0a05303640561014a425",
+      "archive": "archives/impeccable.zip",
+      "sha256": "a4b059c662a1c4edf3cbddbbe5b758e7e63c1c76c2d09e75188f3082816fcc67",
+      "file_count": 62,
+      "license": "Apache-2.0",
+      "license_path": "LICENSE",
+      "scope_en": "Generated Codex skill, references and scripts. Two derived platform guides and the generated browser bundle are omitted pending separate attribution review. The CLI is separate.",
+      "scope_ar": "مهارة Codex المبنية ومراجعها وسكربتاتها. استُبعد دليلان مشتقان للمنصات وحزمة المتصفح المبنية لحين مراجعة نسبها بصورة مستقلة. CLI متطلب منفصل."
+    },
+    {
+      "id": "ui-ux-pro-max",
+      "name": "UI UX Pro Max",
+      "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+      "commit": "0da327f37b436c173ce51177678b65ca92e6f3f7",
+      "archive": "archives/ui-ux-pro-max.zip",
+      "sha256": "ee9d6a2ce3bd15603d45c2d7f62ea902ea6465b72b72865839bd4a6ab5f42087",
+      "file_count": 75,
+      "license": "MIT",
+      "license_path": "LICENSE",
+      "scope_en": "Complete UI/UX Pro Max skill folder, including datasets, provenance and Python scripts.",
+      "scope_ar": "مجلد مهارة UI/UX Pro Max كاملًا، بما فيه البيانات وسجل مصادرها وسكربتات Python."
+    },
+    {
+      "id": "anthropic-frontend-design",
+      "name": "Anthropic Skills (Frontend Design)",
+      "url": "https://github.com/anthropics/skills",
+      "commit": "2c5958ecac7cee2b583967a2c4981d0f4a75c579",
+      "archive": "archives/anthropic-frontend-design.zip",
+      "sha256": "6355d09cc58b8a6b317293bfaa40cc553f02a36a451d7262be158a41b5f8a74f",
+      "file_count": 2,
+      "license": "Apache-2.0",
+      "license_path": "skills/frontend-design/LICENSE.txt",
+      "scope_en": "Complete Frontend Design skill only, with its own license.",
+      "scope_ar": "مهارة Frontend Design كاملة مع ترخيصها الخاص."
+    },
+    {
+      "id": "web-interface-guidelines",
+      "name": "Vercel Web Interface Guidelines",
+      "url": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "archive": "archives/web-interface-guidelines.zip",
+      "sha256": "1e1b3b3a135c460544c743fb09a2847480279003a9e93131e8979f07bf8d0233",
+      "file_count": 4,
+      "license": "MIT",
+      "license_path": "LICENSE",
+      "scope_en": "Guidelines and command source. The upstream installer is omitted.",
+      "scope_ar": "الإرشادات ومصدر الأمر. لم تُضمَّن أداة التثبيت الخارجية."
+    },
+    {
+      "id": "remotion-codex",
+      "name": "Remotion Codex Plugin",
+      "url": "https://github.com/remotion-dev/codex-plugin",
+      "commit": "630e4f44bf5a7c003789703cb031fc3fe8fdd2bf",
+      "archive": "archives/remotion-codex.zip",
+      "sha256": "7e7c51ab4457ebf246cfe1e185d00a0108e1f6206e6957b09cc411060b8a2495",
+      "file_count": 213,
+      "license": "MIT",
+      "license_path": "LICENSE",
+      "scope_en": "Skill text, references and source scripts from the MIT Codex plugin. Logos, media and the separately licensed Remotion runtime are omitted.",
+      "scope_ar": "تعليمات المهارات والمراجع والسكربتات من إضافة Codex بترخيص MIT. الشعارات والوسائط ومحرك Remotion ذي الترخيص المنفصل غير مشمولة."
+    },
+    {
+      "id": "hyperframes",
+      "name": "HyperFrames",
+      "url": "https://github.com/heygen-com/hyperframes",
+      "commit": "a595755a35f4d7ad49b83a47f4e39445562bf3d9",
+      "archive": "archives/hyperframes.zip",
+      "sha256": "bd7cbb1b9ea85f14ccd0edf983cd0ddca7eadae23f8a99f24a49a004d17fc888",
+      "file_count": 97,
+      "license": "Apache-2.0",
+      "license_path": "LICENSE",
+      "scope_en": "Core, CLI and registry skill code, references and HTML/CSS templates. Fonts, media and the CLI runtime are omitted.",
+      "scope_ar": "كود ومراجع المهارات الأساسية وCLI والسجل وقوالب HTML/CSS. الخطوط والوسائط ومحرك CLI غير مشمولة."
+    },
+    {
+      "id": "onetake-videogen",
+      "name": "onetake-videogen",
+      "url": "https://github.com/Nael-Nathanael/onetake-videogen",
+      "commit": "f2e28d8061809b77a993efa44659504758293575",
+      "archive": "archives/onetake-videogen.zip",
+      "sha256": "cca5ef961cb8ce3dc443601afcde10671093f46545e1907ef475657a5eda570a",
+      "file_count": 55,
+      "license": "MIT",
+      "license_path": "LICENSE",
+      "scope_en": "Skill, pipeline scripts, Remotion project source and original notices. Media, upstream patches and installer are omitted. External runtimes are separate.",
+      "scope_ar": "المهارة وسكربتات خط الإنتاج ومصدر مشروع Remotion والإشعارات الأصلية. الوسائط والرقع وأداة التثبيت غير مشمولة. محركات التشغيل الخارجية منفصلة."
+    }
+  ]
+}

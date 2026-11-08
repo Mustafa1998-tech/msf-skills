@@ -24,3 +24,5 @@ jobs:
         run: python3 scripts/verify-environment.py --require node
       - name: Run offline quality gates
         run: python3 scripts/run-quality-gates.py
+      - name: Verify archived upstream sources
+        run: python3 scripts/vendor-skills.py verify
