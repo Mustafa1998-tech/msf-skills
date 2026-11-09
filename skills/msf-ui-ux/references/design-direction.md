@@ -1,6 +1,6 @@
 # Product-adaptive UI direction
 
-MSF is a **method**, not a visual brand. The factory should produce recognizably different interfaces when products differ; shared quality standards do not imply shared palettes, layouts or components.
+MSF provides a design method and shared quality checks. Derive the palette, layout and components separately for each product.
 
 ## Identity signals, in order of reliability
 
@@ -10,7 +10,7 @@ MSF is a **method**, not a visual brand. The factory should produce recognizably
 4. Product name and its possible meaning: **a creative clue, not proof of domain, brand colors or audience**.
 5. Independently researched design references, properly licensed and checked for relevance.
 
-Avoid deriving colors from the spelling of a product name, assuming every healthcare product is teal or every finance product dark blue, or adding a dashboard to a product that does not need one.
+Use the product name to suggest a direction. Confirm visual choices against the product’s brand and tasks. Add a dashboard only when users need to monitor or compare information.
 
 ## Direction exploration: only if useful
 
@@ -22,15 +22,12 @@ For a **new product without defined brand identity**, choose 2–3 clearly disti
 
 Choose a direction through reasoned comparison and user constraints. An existing branded product or a request for strict visual fidelity should not trigger unnecessary redesign or forced alternatives.
 
-## Illustrative differences (never presets)
+## Translate product evidence into visual choices
 
-- An emergency dispatch UI might prioritize speed, high-contrast states and dense real-time indicators.
-- A children's learning product might use expressive illustration, playful rhythm and simpler navigation.
-- A public service might prioritize clarity, trust, accessibility and multi-step guidance.
-- A specialist research interface might privilege dense comparison, precise controls and keyboard workflows.
-- A premium editorial platform might use generous typography, curated imagery and deliberate whitespace.
-
-Any product in these sectors could validly choose a different visual direction depending on its users and brand.
+- Set information density from what users must compare, how often they do it, and the available screen space.
+- Choose navigation and visual hierarchy from the primary tasks, content structure and roles.
+- Use the brand and existing screens to guide typography, color, icons and surface styling. Confirm contrast and usability on the target devices.
+- Record the reason for each major choice so another designer can evaluate its fit to this product.
 
 ## Product identity decision record
 
