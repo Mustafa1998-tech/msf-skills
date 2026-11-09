@@ -18,19 +18,19 @@ Score each criterion from 0 to 4: 0 = unusable or not verified; 1 = major issue;
 1. Primary task and hierarchy
 2. Navigation and orientation
 3. Layout rhythm, space and grouping
-4. Arabic typography and mixed text direction
+4. Typography, language-appropriate direction and readable mixed scripts
 5. Design tokens, icons and consistency
 6. Loading, empty, errors, success and feedback
 7. Forms, tables and interaction affordances
 8. Mobile, tablet and desktop behavior
 9. Keyboard focus, semantics and contrast
-10. Alignment, density and final polish
+10. Product-fit aesthetics, distinctiveness, alignment and final polish
 
 A review score of at least 34/40 with no unresolved P0/P1 is an **internal candidate threshold**, not proof of usability or accessibility. Mark untested criteria separately rather than awarding unearned points.
 
 ## Evidence matrix
 
-Capture the main journey at desktop (1440px), tablet (768px), and mobile (390px), or the product's documented widths. Use equal data, theme, viewport and zoom for before/after comparisons. Test RTL, long Arabic labels, LTR identifiers, keyboard order and focus, scrolling tables, search and forms. Inspect states such as loading, empty, validation, and failures. Test dark mode and reduced motion only where applicable.
+Capture the main journey at desktop (1440px), tablet (768px), and mobile (390px), or the product's documented widths. Use equal data, theme, viewport and zoom for before/after comparisons. Test the product's actual locale and direction, long localized labels and mixed-direction identifiers, keyboard order and focus, scrolling tables, search and forms. Inspect states such as loading, empty, validation, and failures. Test dark mode and reduced motion only where applicable. Review whether the visual identity fits the specific product rather than a generic MSF template.
 
 ## Delivery
 
