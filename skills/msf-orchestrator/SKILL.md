@@ -24,6 +24,8 @@ Read-only workspace access for repository tasks, available tools list and permis
 
 3. For an explicitly selected upstream reference available in the MSF checkout, prefer the pinned source archive in `vendor/`. Verify and extract it for review only. Keep installation and execution of external scripts, packages or telemetry opt-in.
 
+For long-running or multi-agent tasks, apply [MSF AI Agent Strategy](../msf-ai-agent-strategy/SKILL.md) to manage scoped context, durable state, checkpoints and verified handoffs.
+
 ## Safety
 
 Order user and platform constraints ahead of repo conventions and specialist advice. Stop the dependent operation for unresolved permission or conflicting requirements. Require explicit approval for destructive operations, production deployment, infrastructure, secrets or live data changes.
