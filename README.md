@@ -11,20 +11,21 @@ Created by Mustafa. MSF Skills is an independent, bilingual collection of agent 
 | Count | What it covers |
 | --- | --- |
 | **9 domains** | Discovery and planning, architecture, UI/UX, full-stack engineering, security, testing, DevOps, documentation, and video production |
-| **12 original MSF skills** | One orchestrator and 11 specialists. Full-stack engineering is split into frontend, backend, and database skills. |
-| **24 installable skill folders** | 12 English and 12 Arabic variants. See the [skill registry](config/skill-registry.yaml). |
+| **13 original MSF skills** | One orchestrator and 12 specialists. Full-stack engineering is split into frontend, backend, and database skills. |
+| **26 installable skill folders** | 13 English and 13 Arabic variants. See the [skill registry](config/skill-registry.yaml). |
 | **19 original external links** | The initial brief listed 1 planning source, 2 UI/UX sources, 1 Anthropic skills repository, 3 Playwright repositories, and 12 video sources. |
 | **43 documented external sources** | The expanded [source and license register](GITHUB_SOURCES.md) includes the initial links and additional references. |
 
-The orchestrator selects from the 11 internal specialists according to the task. External sources include skills, plugins, libraries, tools, and documentation. Install an external dependency only when the selected workflow requires it. The figure **31** combines the 12 original skills and the 19 initial external links.
+The orchestrator selects from the 12 internal specialists according to the task. External sources include skills, plugins, libraries, tools, and documentation. Install an external dependency only when the selected workflow requires it. The figure **32** combines the 13 original skills and the 19 initial external links.
 
 ## Skill catalog
 
-Every English ID has an equivalent Arabic ID with the suffix `-ar`. The registry lists all 24 installable directories.
+Every English ID has an equivalent Arabic ID with the suffix `-ar`. The registry lists all 26 installable directories.
 
 | Skill | Applies to |
 | --- | --- |
 | `msf-orchestrator` | Intent, repository discovery, selective routing and evidence |
+| [`msf-ai-agent-strategy`](skills/msf-ai-agent-strategy/SKILL.md) | Context hygiene, task isolation, durable state, checkpoints, agent handoffs and verification |
 | `msf-planning` | Requirements, processes, stories, tasks, risk and ADRs |
 | `msf-architecture` | Boundaries, architecture decisions, refactoring and review |
 | `msf-ui-ux` | Enterprise interfaces, RTL/LTR, themes, accessibility and critique |
@@ -36,6 +37,10 @@ Every English ID has an equivalent Arabic ID with the suffix `-ar`. The registry
 | `msf-devops` | CI/CD, IIS, containers, infrastructure, reliability and release |
 | `msf-documentation` | Manuals, OpenAPI, deployment, troubleshooting and release notes |
 | `msf-video-studio` | Capture, narration, captions, rendering and media QA |
+
+## AI agent strategy
+
+The [MSF AI Agent Strategy](skills/msf-ai-agent-strategy/SKILL.md) works with the orchestrator on long-running tasks: scope relevant context, split work into verifiable increments, persist decisions and project state, checkpoint before compaction, and hand off with actual test evidence. These practices reduce context rot but cannot guarantee perfect recall.
 
 ## Start
 
