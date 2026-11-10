@@ -7,6 +7,11 @@
       "category": "orchestrator"
     },
     {
+      "en": "msf-ai-agent-strategy",
+      "ar": "msf-ai-agent-strategy-ar",
+      "category": "agent-strategy"
+    },
+    {
       "en": "msf-planning",
       "ar": "msf-planning-ar",
       "category": "planning"
