@@ -39,6 +39,7 @@ Local file import is the integration boundary. If use of an external tool and th
 ### Optional composition and caption tools
 
 - [Remotion](https://github.com/remotion-dev/remotion) or [HyperFrames](https://github.com/heygen-com/hyperframes): evaluate when a project needs its own HTML/React motion templates. Review the applicable upstream license and runtime before use. Export the segment to a local video file; neither renderer is bundled.
+  For Remotion, follow the [MSF optional bilingual workflow and working example](remotion.md); external packages remain opt-in.
 - [faster-whisper](https://github.com/SYSTRAN/faster-whisper): use a locally approved model to draft subtitle text or timings. A fluent human should correct terminology, reading order, and cue timing before the draft becomes storyboard captions. The local renderer does not fetch models.
 - [edge-tts](https://github.com/rany2/edge-tts): optional online voice generation for approved scripts and voices. Review service access and usage terms before generating a local narration asset. The renderer never calls it.
 - The inventory separates similarly named projects: [onetake for motion films](https://github.com/feitangyuan/onetake), [onetake-videogen](https://github.com/Nael-Nathanael/onetake-videogen), and [OneTake automatic editor](https://github.com/leejersey/OneTake). Assess the named project's license and interfaces separately before using an export.
