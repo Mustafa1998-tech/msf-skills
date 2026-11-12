@@ -39,6 +39,7 @@
 ### أدوات اختيارية للتأليف والترجمة
 
 - [Remotion](https://github.com/remotion-dev/remotion) و[HyperFrames](https://github.com/heygen-com/hyperframes): خياران عندما يحتاج المشروع قوالب حركة خاصة مبنية على HTML أو React. راجع الترخيص والمتطلبات أولًا، ثم صدّر المقطع إلى ملف فيديو محلي؛ لا تأتي الأداتان ضمن الحزمة.
+  لمسار Remotion راجع [دليل MSF الاختياري ومثال اللغتين](remotion.md)؛ تظل الحزم الخارجية اختيارية.
 - [faster-whisper](https://github.com/SYSTRAN/faster-whisper): يمكن استخدام نموذج محلي مُجاز لإعداد مسودة للترجمة والتوقيت. يراجع متحدث متمكن المصطلحات وترتيب القراءة والتزامن قبل نقلها إلى المخطط. لا تجلب أداة الإخراج أي نموذج تلقائيًا.
 - [edge-tts](https://github.com/rany2/edge-tts): خيار صوتي عبر الإنترنت للنصوص والأصوات المُجازة. راجع شروط الخدمة وإمكانية الوصول قبل إنشاء مسار محلي. لا تستدعيه أداة الإخراج.
 - يميّز سجل المصادر بين [onetake لصناعة المقاطع المتحركة](https://github.com/feitangyuan/onetake)، و[onetake-videogen](https://github.com/Nael-Nathanael/onetake-videogen)، و[محرّر OneTake الآلي](https://github.com/leejersey/OneTake). افحص ترخيص المشروع المقصود وواجهاته قبل استخدام أي تصدير منه.
