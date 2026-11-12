@@ -1,0 +1,25 @@
+{
+  "name": "msf-remotion-training-video-example",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Optional, synthetic bilingual Remotion demonstration for MSF Video Studio",
+  "scripts": {
+    "dev": "remotion studio src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "render:ar": "remotion render src/index.ts MSFTrainingAR out/training.ar.mp4",
+    "render:en": "remotion render src/index.ts MSFTrainingEN out/training.en.mp4",
+    "render:ar:4k": "remotion render src/index.ts MSFTrainingAR out/training.ar.4k.mp4 --scale=2",
+    "render:en:4k": "remotion render src/index.ts MSFTrainingEN out/training.en.4k.mp4 --scale=2"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.541",
+    "remotion": "4.0.541",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.0",
+    "@types/react-dom": "19.2.0",
+    "typescript": "5.9.3"
+  }
+}
