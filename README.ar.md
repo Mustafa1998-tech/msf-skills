@@ -59,6 +59,7 @@ python3 scripts/run-quality-gates.py --with-video
 - [ميزة المخزون](examples/angular-dotnet-sqlserver/README.ar.md) بواجهة عربية RTL وتقنيات Angular و.NET وSQL Server.
 - [لوحة المعلومات](examples/arabic-rtl-dashboard/README.ar.md) بلغتين مع تبديل الاتجاه والسمة.
 - [فيديو التدريب](examples/software-training-video/README.ar.md) مع مسار إنتاج اصطناعي قابل للتشغيل.
+- [فيديو Remotion المتحرك](examples/remotion-training-video/README.ar.md) بمشاهد React عربية RTL وإنجليزية LTR، وتصوير 1080p أو 4K عند تثبيت الاعتماديات اختياريًا؛ انظر [دليل ربط Remotion](skills/msf-video-studio-ar/references/remotion.md).
 - [دليل المساهمة](CONTRIBUTING.ar.md) و[الإبلاغ الأمني](SECURITY.md).
 
 محتوى MSF الأصلي متاح بترخيص [MIT](LICENSE). تخضع الأدوات والأصول المشار إليها لشروطها الخاصة. المشروع مستقل عن الجهات التي يشير إلى برمجياتها.
