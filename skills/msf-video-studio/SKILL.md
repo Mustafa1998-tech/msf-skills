@@ -27,6 +27,7 @@ Python 3.9+, `ffmpeg` and `ffprobe` on PATH, FFmpeg built with `libx264`, AAC an
 3. Set `asset_scope` only after review. Put captions and cues on scene-local timestamps. Coordinates use a 1920 × 1080 design canvas even when exporting 4K. Position an animated cursor, a focus outline, or a short callout on the precise control, keeping the lower caption area clear. Pair edits with brief fades or use a hard cut between tightly connected actions.
 4. Add approved scene narration and optional low-level music. Use the UI's exact labels in both spoken and caption text; have a fluent reviewer check Arabic pronunciation and terminology. Use separate projects for translated timing. Source clip audio is excluded; supply any retained audio separately as an approved track.
 5. Render from the installed skill directory, then review a draft at normal speed. Use `--no-burn-captions` if the delivery player will load the SRT and the video should remain visually clean.
+6. When the brief calls for programmable React motion graphics, branded transitions or reusable animated compositions, use the **optional Remotion workflow** in [the Remotion guide](references/remotion.md). It has a bilingual synthetic example and a separate runtime/license review. Keep the default offline FFmpeg workflow for simpler tutorials; never install outside agent skills or Remotion packages without opting in. Export a reviewed Remotion MP4 before using it as a storyboard scene source.
 
 ```bash
 python3 scripts/render.py /path/to/storyboard.json /path/to/output.mp4 --resolution 1080p
@@ -55,3 +56,4 @@ If `ass`, `libx264` or AAC is missing, use an FFmpeg build that includes it. Mis
 
 - [Storyboard template](references/video-storyboard.json)
 - [File format, capture and adapter guide](references/studio.md)
+- [Optional Remotion / React motion graphics workflow](references/remotion.md)
