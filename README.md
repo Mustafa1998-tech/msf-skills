@@ -59,6 +59,7 @@ The offline checks are reproducible without internet. Optional integrations requ
 - [Inventory feature](examples/angular-dotnet-sqlserver/README.md) with Arabic RTL, Angular, .NET and SQL Server.
 - [Bilingual dashboard](examples/arabic-rtl-dashboard/README.md) with directional and theme switching.
 - [Training video](examples/software-training-video/README.md) with a runnable synthetic production workflow.
+- [Remotion motion graphics video](examples/remotion-training-video/README.md) with optional React animation, Arabic RTL and English LTR compositions, and 1080p/4K rendering; see the [MSF Video Studio adapter](skills/msf-video-studio/references/remotion.md).
 - [Contribute](CONTRIBUTING.md) or [report a security issue](SECURITY.md).
 
 Original MSF content is [MIT](LICENSE). Linked tools and assets have their own terms. MSF Skills is independent of the organizations whose software it references.
